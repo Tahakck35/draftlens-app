@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DraftLens</title>
+  <meta name="description" content="Free, lightweight Dota 2 companion app for Overwolf: draft analysis, lobby player cards, counter items and in-game timers.">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root { --bg: #0a0a0b; --panel: #141416; --line: #26262a; --text: #e8e8ea; --muted: #8b8b92; --gold: #e8b74c; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 48px 16px 64px; }
+    header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+    header img { width: 64px; height: 64px; border-radius: 12px; }
+    h1 { margin: 0; font-size: 34px; letter-spacing: 0.04em; }
+    h1 b { color: var(--gold); }
+    .lead { color: var(--muted); margin: 0 0 32px; }
+    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin: 36px 0 12px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .card h3 { margin: 0 0 8px; font-size: 15px; }
+    .card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .shots img { width: 100%; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); }
+    kbd { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; font-size: 13px; }
+    a { color: var(--gold); }
+    footer { margin-top: 48px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="icon.png" alt="">
+      <h1>DRAFT<b>LENS</b></h1>
+    </header>
+    <p class="lead">A free, lightweight Dota 2 companion app for Overwolf (Windows). English · Türkçe · Русский</p>
+
+    <p>DraftLens is a minimal alternative to Dota Plus. It prepares draft analysis in a separate desktop window you open with Alt+Tab, and keeps only a small, transparent overlay on top of the game.</p>
+
+    <h2>Features</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Draft</h3>
+        <ul>
+          <li>Player cards for all 10 players: rank, win rate, role split, top heroes, likely parties</li>
+          <li>Counters for each enemy, filtered by your position</li>
+          <li>Team vs team matchup matrix</li>
+          <li>Counter items for your role</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>In game</h3>
+        <ul>
+          <li>Rune and Roshan timers</li>
+          <li>Counter items in a small overlay</li>
+          <li><kbd>Ctrl+Shift+D</kbd> show/hide, <kbd>Ctrl+Shift+R</kbd> Roshan killed</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Profile</h3>
+        <ul>
+          <li>Match history with positions and IMP</li>
+          <li>All 10 players ranked by each stat, IMP and awards</li>
+          <li>Matches recorded on this PC, even with a private profile</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <img src="screenshots/draft.png" alt="Draft window">
+      <img src="screenshots/overlay.png" alt="In-game overlay">
+      <img src="screenshots/match.png" alt="Match details">
+    </div>
+
+    <h2>Data</h2>
+    <p>Matchups, player cards, positions and IMP come from the <a href="https://stratz.com">STRATZ</a> API. Match details and fallback data come from <a href="https://www.opendota.com">OpenDota</a>. Responses are cached on the user's PC to keep API usage low.</p>
+
+    <h2>Status</h2>
+    <p>In testing on Overwolf (developer account approved). Store release is coming soon.</p>
+
+    <h2>Contact</h2>
+    <p>Discord: happypower#2343</p>
+
+    <footer>Data provided by STRATZ and OpenDota. DraftLens is not affiliated with Valve Corporation. Dota 2 is a registered trademark of Valve Corporation.</footer>
+  </div>
+</body>
+</html>
