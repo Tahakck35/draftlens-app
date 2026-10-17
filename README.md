@@ -3,7 +3,7 @@
 <h1 align="center">DraftLens</h1>
 
 <p align="center">A free, lightweight Dota 2 companion app for <a href="https://www.overwolf.com/">Overwolf</a> (Windows).<br>
-English · Türkçe · Русский</p>
+English · Türkçe · Русский · more languages coming</p>
 
 ---
 
@@ -39,9 +39,12 @@ DraftLens is a minimal alternative to Dota Plus. It prepares draft analysis in a
 
 Responses are cached on the user's PC to keep API usage low. No account data leaves the user's PC except requests to these APIs.
 
-## Status
+## Status and roadmap
 
-In testing on Overwolf (developer account approved). Store release is coming soon.
+DraftLens is in active development. It is in testing on Overwolf (developer account approved) and the store release is coming soon.
+
+- New features and improvements with regular updates.
+- More interface languages beyond English, Turkish and Russian.
 
 ## Contact
 
