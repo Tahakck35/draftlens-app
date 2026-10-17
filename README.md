@@ -39,6 +39,10 @@ DraftLens is a minimal alternative to Dota Plus. It prepares draft analysis in a
 
 Responses are cached on the user's PC to keep API usage low. No account data leaves the user's PC except requests to these APIs.
 
+## Privacy
+
+See the [privacy policy](https://tahakck35.github.io/draftlens-app/privacy.html).
+
 ## Status and roadmap
 
 DraftLens is in active development. It is in testing on Overwolf (developer account approved) and the store release is coming soon.

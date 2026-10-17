@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DraftLens Privacy Policy</title>
+  <meta name="description" content="What data the DraftLens Overwolf app uses, where it goes and what stays on your PC.">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root { --bg: #0a0a0b; --panel: #141416; --line: #26262a; --text: #e8e8ea; --muted: #8b8b92; --gold: #e8b74c; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 48px 16px 64px; }
+    header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+    header img { width: 64px; height: 64px; border-radius: 12px; }
+    h1 { margin: 0; font-size: 34px; letter-spacing: 0.04em; }
+    h1 b { color: var(--gold); }
+    .lead { color: var(--muted); margin: 0 0 32px; }
+    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin: 36px 0 12px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .card h3 { margin: 0 0 8px; font-size: 15px; }
+    .card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .shots img { width: 100%; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); }
+    kbd { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; font-size: 13px; }
+    a { color: var(--gold); }
+    footer { margin-top: 48px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="./"><img src="icon.png" alt=""></a>
+      <h1>DRAFT<b>LENS</b></h1>
+    </header>
+    <p class="lead">Privacy Policy · Last updated: October 17, 2026</p>
+
+    <p>DraftLens is a free Dota 2 companion app for Overwolf. This page explains what data it uses and where that data goes. In short: DraftLens has no accounts and no servers of its own that store your data, it does not sell data, and it does not track you.</p>
+
+    <h2>Data DraftLens reads</h2>
+    <ul>
+      <li><b>Game events from Overwolf:</b> draft picks, match state, game clock and the Steam IDs of players in your lobby, as provided by Overwolf's game event API while Dota 2 is running.</li>
+      <li><b>Your Steam account ID:</b> taken from the game, or entered by you in the app, to show your profile and match history.</li>
+      <li><b>Steam settings file (only when you press the button):</b> if you use "add launch option" in Settings, DraftLens edits Dota 2's launch options in Steam's <code>localconfig.vdf</code> and keeps a backup copy next to it. Nothing from this file is sent anywhere.</li>
+    </ul>
+
+    <h2>Data sent to third parties</h2>
+    <p>To show statistics, DraftLens sends requests to these public Dota 2 data services. The requests contain Steam account IDs, hero IDs and match IDs only. Each service has its own privacy policy on its website.</p>
+    <ul>
+      <li><a href="https://stratz.com">STRATZ</a> API (matchups, player cards, IMP, positions).</li>
+      <li><a href="https://www.opendota.com">OpenDota</a> API (match details and backup data).</li>
+      <li>Hero, item and rank images may be loaded from Valve's and OpenDota's image servers when they are not bundled with the app.</li>
+    </ul>
+    <p>Player statistics are only available for profiles that are public on Steam and Dota 2. DraftLens shows "private profile" for everyone else.</p>
+
+    <h2>Data stored on your PC</h2>
+    <ul>
+      <li>Responses from STRATZ and OpenDota are cached on your PC to keep requests low. Old entries are removed automatically.</li>
+      <li>Matches you play while DraftLens runs are saved on your PC so your history works even with a private profile. You can delete them in the app.</li>
+      <li>Your settings: language, role and Steam account ID.</li>
+    </ul>
+    <p>This data stays in the app's local storage on your PC and is removed when you uninstall DraftLens.</p>
+
+    <h2>Overwolf and ads</h2>
+    <p>DraftLens runs on the Overwolf platform. Overwolf, and the ads it may show in the app, are covered by Overwolf's own privacy policy on <a href="https://www.overwolf.com">overwolf.com</a>.</p>
+
+    <h2>Children</h2>
+    <p>DraftLens is not directed at children under 13 and does not knowingly collect their data.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version will be posted on this page with a new date.</p>
+
+    <p><a href="./">← Back to DraftLens</a></p>
+
+    <footer>Data provided by STRATZ and OpenDota. DraftLens is not affiliated with Valve Corporation. Dota 2 is a registered trademark of Valve Corporation.</footer>
+  </div>
+</body>
+</html>
