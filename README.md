@@ -28,9 +28,9 @@ DraftLens is a minimal alternative to Dota Plus. It prepares draft analysis in a
 
 ## Screenshots
 
-| Draft | Overlay | Match details |
+| Draft | Overlay | Profile |
 |---|---|---|
-| ![Draft](screenshots/draft.png) | ![Overlay](screenshots/overlay.png) | ![Match details](screenshots/match.png) |
+| ![Draft](screenshots/draft.png) | ![Overlay](screenshots/overlay.png) | ![Profile](screenshots/profile.png) |
 
 ## Data
 
