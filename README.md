@@ -46,10 +46,6 @@ DraftLens is in active development. It is in testing on Overwolf (developer acco
 - New features and improvements with regular updates.
 - More interface languages beyond English, Turkish and Russian.
 
-## Contact
-
-Discord: happypower#2343
-
 ---
 
 <sub>Data provided by STRATZ and OpenDota. DraftLens is not affiliated with Valve Corporation. Dota 2 is a registered trademark of Valve Corporation.</sub>
