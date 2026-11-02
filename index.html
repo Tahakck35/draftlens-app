@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DraftLens</title>
-  <meta name="description" content="Free, lightweight Dota 2 companion app for Overwolf: draft analysis, lobby player cards, counter items and in-game timers.">
+  <meta name="description" content="Free, lightweight Dota 2 companion app for Overwolf: draft analysis, player cards, counter items, rune timers and a match history that works with a private profile.">
   <link rel="icon" href="icon.png">
   <style>
     :root { --bg: #0a0a0b; --panel: #141416; --line: #26262a; --text: #e8e8ea; --muted: #8b8b92; --gold: #e8b74c; }
@@ -25,6 +25,9 @@
     .shots img { width: 100%; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); }
     kbd { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; font-size: 13px; }
     a { color: var(--gold); }
+    .shots figure { margin: 0; }
+    .shots figcaption { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .shots .wide { grid-column: 1 / -1; }
     footer { margin-top: 48px; color: var(--muted); font-size: 12px; }
   </style>
 </head>
@@ -34,59 +37,61 @@
       <img src="icon.png" alt="">
       <h1>DRAFT<b>LENS</b></h1>
     </header>
-    <p class="lead">A free, lightweight Dota 2 companion app for Overwolf (Windows). English · Türkçe · Русский · more languages coming</p>
+    <p class="lead">A free, lightweight Dota 2 companion app for Overwolf (Windows). English · Türkçe · Русский · Español · Português · Deutsch · Français · Polski · Українська · 简体中文</p>
 
-    <p>DraftLens is a minimal alternative to Dota Plus. It prepares draft analysis in a separate desktop window you open with Alt+Tab, and keeps only a small, transparent overlay on top of the game.</p>
+    <p>DraftLens is a minimal alternative to Dota Plus. Draft analysis lives in a separate desktop window you open with Alt+Tab. On top of the game there is only a small, transparent overlay, and you can turn it off completely. There are never ads in the game or on the overlay.</p>
 
     <h2>Features</h2>
     <div class="grid">
       <div class="card">
         <h3>Draft</h3>
         <ul>
-          <li>Player cards for all 10 players: rank, win rate, role split, top heroes, likely parties</li>
-          <li>Counters for each enemy, filtered by your position</li>
-          <li>Team vs team matchup matrix</li>
-          <li>Counter items for your role</li>
+          <li>Player cards for all 10 players: rank, matches and win rate, core/support split, most played heroes, experience on the picked hero</li>
+          <li>Your own party marked from the game; other parties guessed from recent games together</li>
+          <li>Heroes that beat each enemy, filtered by position</li>
+          <li>Team vs team win rate matrix, with an "if picked" preview row</li>
+          <li>Pick ideas for teammates who haven't picked yet</li>
+          <li>Counter items for your role, including hero-specific answers</li>
         </ul>
       </div>
       <div class="card">
         <h3>In game</h3>
         <ul>
-          <li>Rune and Roshan timers</li>
+          <li>Rune timers (bounty, power, wisdom, lotus)</li>
           <li>Counter items in a small overlay</li>
-          <li><kbd>Ctrl+Shift+D</kbd> show/hide, <kbd>Ctrl+Shift+R</kbd> Roshan killed</li>
+          <li><kbd>Ctrl+Shift+D</kbd> show/hide, <kbd>Ctrl+Shift+M</kbd> move</li>
+          <li>Settings switch to keep the overlay off in every match</li>
         </ul>
       </div>
       <div class="card">
         <h3>Profile</h3>
         <ul>
-          <li>Match history with positions and IMP</li>
-          <li>All 10 players ranked by each stat, IMP and awards</li>
-          <li>Matches recorded on this PC, even with a private profile</li>
+          <li>Match history with positions, KDA, GPM/XPM and links</li>
+          <li>Match details: all 10 players ranked by each stat, buildings, net worth graph, lane results</li>
+          <li>Matches recorded on this PC: MMR change per match, MMR and confidence, role performance. Works even with a private profile</li>
         </ul>
       </div>
     </div>
 
     <h2>Screenshots</h2>
     <div class="shots">
-      <img src="screenshots/draft.png" alt="Draft window">
-      <img src="screenshots/overlay.png" alt="In-game overlay">
-      <img src="screenshots/profile.png" alt="Profile and match history">
+      <figure class="wide"><img src="screenshots/draft-players.jpg" alt="Player cards during the draft"><figcaption>Player cards during the draft</figcaption></figure>
+      <figure class="wide"><img src="screenshots/draft-analysis.jpg" alt="Counters, win rate matrix and counter items"><figcaption>Counters, win rate matrix and counter items</figcaption></figure>
+      <figure class="wide"><img src="screenshots/profile.jpg" alt="Matches recorded on this PC"><figcaption>Matches recorded on this PC</figcaption></figure>
+      <figure class="wide"><img src="screenshots/match-detail.jpg" alt="Match details"><figcaption>Match details</figcaption></figure>
+      <figure><img src="screenshots/overlay.png" alt="In-game overlay" style="width:200px"><figcaption>In-game overlay</figcaption></figure>
     </div>
+    <p class="lead" style="margin-top:8px">Screenshots use sample data.</p>
 
     <h2>Data</h2>
-    <p>Matchups, player cards, positions and IMP come from the <a href="https://stratz.com">STRATZ</a> API. Match details and fallback data come from <a href="https://www.opendota.com">OpenDota</a>. Responses are cached on the user's PC to keep API usage low.</p>
+    <p>Player cards, match history and match details come from the public <a href="https://www.opendota.com">OpenDota</a> API. Matchups are based on the last year of pro matches and adjusted with overall hero win rates. Responses are cached on your PC to keep requests low. DraftLens needs no API key and no account.</p>
 
-    <h2>Status and roadmap</h2>
-    <p>DraftLens is in active development. It is in testing on Overwolf (developer account approved) and the store release is coming soon.</p>
-    <ul>
-      <li>New features and improvements with regular updates.</li>
-      <li>More interface languages beyond English, Turkish and Russian.</li>
-    </ul>
+    <h2>Status</h2>
+    <p>Version 1.0 has been submitted to the Overwolf store and is under review. Updates will follow with fixes and new features.</p>
 
     <p><a href="privacy.html">Privacy policy</a></p>
 
-    <footer>Data provided by STRATZ and OpenDota. DraftLens is not affiliated with Valve Corporation. Dota 2 is a registered trademark of Valve Corporation.</footer>
+    <footer>Data provided by OpenDota. DraftLens is not affiliated with Valve Corporation. Dota 2 is a registered trademark of Valve Corporation.</footer>
   </div>
 </body>
 </html>
