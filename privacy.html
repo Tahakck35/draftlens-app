@@ -34,31 +34,32 @@
       <a href="./"><img src="icon.png" alt=""></a>
       <h1>DRAFT<b>LENS</b></h1>
     </header>
-    <p class="lead">Privacy Policy · Last updated: October 17, 2026</p>
+    <p class="lead">Privacy Policy · Last updated: November 2, 2026</p>
 
     <p>DraftLens is a free Dota 2 companion app for Overwolf. This page explains what data it uses and where that data goes. In short: DraftLens has no accounts and no servers of its own that store your data, it does not sell data, and it does not track you.</p>
 
     <h2>Data DraftLens reads</h2>
     <ul>
-      <li><b>Game events from Overwolf:</b> draft picks, match state, game clock and the Steam IDs of players in your lobby, as provided by Overwolf's game event API while Dota 2 is running.</li>
+      <li><b>Game events from Overwolf:</b> draft picks, match state, game clock, the Steam IDs of players in your lobby (available after the pick phase), your party, and your own rank information (MMR, confidence, behavior and communication score) when Dota 2 reports it, as provided by Overwolf's game event API while Dota 2 is running.</li>
       <li><b>Your Steam account ID:</b> taken from the game, or entered by you in the app, to show your profile and match history.</li>
       <li><b>Steam settings file (only when you press the button):</b> if you use "add launch option" in Settings, DraftLens edits Dota 2's launch options in Steam's <code>localconfig.vdf</code> and keeps a backup copy next to it. Nothing from this file is sent anywhere.</li>
     </ul>
 
     <h2>Data sent to third parties</h2>
-    <p>To show statistics, DraftLens sends requests to these public Dota 2 data services. The requests contain Steam account IDs, hero IDs and match IDs only. Each service has its own privacy policy on its website.</p>
+    <p>To show statistics, DraftLens sends requests to a public Dota 2 data service. The requests contain Steam account IDs, hero IDs and match IDs only. Your MMR and rank information are never sent. The service has its own privacy policy on its website.</p>
     <ul>
-      <li><a href="https://stratz.com">STRATZ</a> API (matchups, player cards, IMP, positions).</li>
-      <li><a href="https://www.opendota.com">OpenDota</a> API (match details and backup data).</li>
+      <li><a href="https://www.opendota.com">OpenDota</a> API (player cards, match history, match details, matchups). For recent matches DraftLens may ask OpenDota to process the match replay so graphs and lane results are available.</li>
       <li>Hero, item and rank images may be loaded from Valve's and OpenDota's image servers when they are not bundled with the app.</li>
     </ul>
     <p>Player statistics are only available for profiles that are public on Steam and Dota 2. DraftLens shows "private profile" for everyone else.</p>
 
     <h2>Data stored on your PC</h2>
     <ul>
-      <li>Responses from STRATZ and OpenDota are cached on your PC to keep requests low. Old entries are removed automatically.</li>
-      <li>Matches you play while DraftLens runs are saved on your PC so your history works even with a private profile. You can delete them in the app.</li>
-      <li>Your settings: language, role and Steam account ID.</li>
+      <li>Responses from OpenDota are cached on your PC to keep requests low. Old entries are removed automatically.</li>
+      <li>Matches you play while DraftLens runs are saved on your PC, with the MMR change Dota 2 reports, so your history works even with a private profile. You can delete them in the app.</li>
+      <li>Your last reported rank information (MMR, confidence, behavior and communication score), per Steam account.</li>
+      <li>Your settings: language, role, overlay on/off and position, Steam account ID.</li>
+      <li>A short diagnostics log of game events and timings. It stays on your PC unless you copy it from Settings and send it yourself.</li>
     </ul>
     <p>This data stays in the app's local storage on your PC and is removed when you uninstall DraftLens.</p>
 
@@ -73,7 +74,7 @@
 
     <p><a href="./">← Back to DraftLens</a></p>
 
-    <footer>Data provided by STRATZ and OpenDota. DraftLens is not affiliated with Valve Corporation. Dota 2 is a registered trademark of Valve Corporation.</footer>
+    <footer>Data provided by OpenDota. DraftLens is not affiliated with Valve Corporation. Dota 2 is a registered trademark of Valve Corporation.</footer>
   </div>
 </body>
 </html>
